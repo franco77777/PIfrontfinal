@@ -1,0 +1,118 @@
+.details {
+  margin: 0;
+  padding: 0;
+  background-image: url(./../mundial/copa.jpg);
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  max-height: 100%;
+  color: white;
+}
+
+.details1 {
+  margin-right: 0;
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.details2 > * {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(243, 243, 243, 0.2);
+  font-family: f;
+  color: white;
+  font-weight: bolder;
+}
+.details1 img {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.activities1 {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.activities1 > * {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(243, 243, 243, 0.2);
+  border-radius: 5px;
+  color: black;
+  font-family: f;
+}
+
+.mundiales {
+  display: flex;
+  color: rgb(253, 208, 5);
+}
+
+.mundiales img {
+  width: 40px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.estrellademundial img {
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transition: 1s;
+}
+
+.mundialesganados img:hover {
+  transform: scale(1.4);
+  transition: 1s;
+}
+
+.imagenesganadores img {
+  border-radius: 0;
+  transition: 0.5s;
+}
+
+.imagenesganadores img:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+.logoinicio img {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  filter: brightness(1.1);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.asdfj:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+.titulopais {
+  text-transform: uppercase;
+  color: rgb(253, 208, 5);
+}
