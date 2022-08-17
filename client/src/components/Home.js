@@ -25,19 +25,19 @@ function Home() {
     dispatch(getCountries())
   }, [])
 
-  const [multiplicador, setMultiplicador] = useState(1)
+  const [multiplicador, setMultiplicador] = useState(0)
 
-  let inicio = 0.9 * multiplicador * 10 //9
-  let final = inicio + 10 //
+  let final = 9 + multiplicador //19-29
+  let inicio = final - 10 //
   let paginados = null
 
-  if (inicio < 10) {
+  if (inicio < 9) {
     paginados = filtered.slice(0, 9)
   } else {
     paginados = filtered.slice(inicio, final)
   }
   let disablePrev = false
-  if (inicio > 10) {
+  if (inicio > 9) {
     disablePrev = true
   }
   let disableNext = true
@@ -47,10 +47,10 @@ function Home() {
 
   const paginado = e => {
     if (e.target.value === "+") {
-      setMultiplicador(multiplicador + 1)
+      setMultiplicador(multiplicador + 10)
     }
     if (e.target.value === "-") {
-      setMultiplicador(multiplicador - 1)
+      setMultiplicador(multiplicador - 10)
     }
   }
 
