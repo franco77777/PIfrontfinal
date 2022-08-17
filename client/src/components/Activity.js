@@ -96,9 +96,6 @@ let Activity = () => {
     )
     dispatch(getCountries())
     alert(creacion.data)
-
-    console.log("soypaquete", paquete)
-    console.log("soy creacion", creacion.data)
   }
 
   let activityValidation = e => {

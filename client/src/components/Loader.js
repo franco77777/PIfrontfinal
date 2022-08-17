@@ -1,5 +1,6 @@
 import React from "react"
 import "./loader.css"
+import logoinicio from "./../mundial/logoinicio.jpg"
 
 const Loader = () => {
   return (
@@ -10,6 +11,7 @@ const Loader = () => {
         <span></span>
         <span></span>
       </section>
+      <img src={logoinicio} alt="s" />
     </article>
   )
 }
