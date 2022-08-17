@@ -91,7 +91,7 @@ let Activity = () => {
 
     let paquete = [actividad, paisespaquete]
     let creacion = await axios.post(
-      "https://backfinalsera2.herokuapp.com/activity",
+      "https://back-final1.herokuapp.com/activity",
       paquete
     )
     dispatch(getCountries())

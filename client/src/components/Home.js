@@ -224,12 +224,12 @@ function Home() {
           <ul className="nuevodatos">
             <span>Website Creator: </span>
             <li>
-              <a href="">
+              <a href="https://www.facebook.com/franco.vedia.12">
                 <i class="fab fa-facebook-f icon"></i>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://www.linkedin.com/in/franco-vedia-602877247/">
                 <i class="fab fa-linkedin-in icon"></i>
               </a>
             </li>

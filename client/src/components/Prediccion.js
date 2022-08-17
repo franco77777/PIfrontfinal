@@ -55,14 +55,13 @@ let Prediccion = ({ countries, setSera, sera }) => {
     let resultado = ++encontrado.numeros
 
     let enviar = await axios.put(
-      `https://backfinalsera2.herokuapp.com/contador/${e.target.name}`,
+      `https://back-final1.herokuapp.com/contador/${e.target.name}`,
       [resultado]
     )
     console.log("soy encontrado", encontrado)
     console.log("soy resultado", resultado)
     await counterRequest()
     await setSera([...counter])
-    
   }
 
   return (
