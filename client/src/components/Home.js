@@ -37,7 +37,7 @@ function Home() {
     paginados = filtered.slice(inicio, final)
   }
   let disablePrev = false
-  if (inicio > 9) {
+  if (inicio > 8) {
     disablePrev = true
   }
   let disableNext = true
