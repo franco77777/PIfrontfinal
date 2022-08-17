@@ -24,7 +24,6 @@ let SlideShow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       selectNewImage(selectedIndex, images)
-      //console.log("soy conter2", counter)
     }, 5000)
 
     return () => clearInterval(interval)
@@ -63,7 +62,6 @@ let SlideShow = () => {
     setSelectedImage(images[nextIndex])
     setSelectedIndex(nextIndex) */
   }
-  console.log("hola")
 
   return (
     <div className="carrusel">

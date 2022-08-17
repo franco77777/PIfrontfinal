@@ -14,16 +14,6 @@ const Estadistica = ({ sera, setSera }) => {
   const dispatch = useDispatch()
   const prediccion = useSelector(state => state.prediccion)
 
-  /*  const prueba = async () => {
-    await counterRequest()
-    await setSera([...counter])
-    console.log("souysera", sera)
-  } */
-
-  /* setInterval(() => {
-    console.log("sysera", sera)
-  }, 5000)  */
-
   sera.sort((a, b) => b.numeros - a.numeros)
   let estadisticas = sera.length ? sera : counter
   const suma = estadisticas && estadisticas.reduce((a, e) => a + e.numeros, 0)
@@ -161,8 +151,7 @@ const Estadistica = ({ sera, setSera }) => {
     }
   `
 
-  console.log("soy counter", counter)
-  console.log("soy sera", sera)
+ 
 
   return (
     <body className="bodyestadistica">

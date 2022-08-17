@@ -17,7 +17,7 @@ const Details = () => {
     dispatch(getCountries())
   }, [params.id])
 
-  console.log("soy details", details)
+ 
   return (
     <div className="details">
       <div className="logoinicio">

@@ -17,7 +17,7 @@ body {
 .padre {
   display: flex;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 21px;
   padding-top: 3px;
   background-color: none;
   flex-wrap: wrap;

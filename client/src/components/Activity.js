@@ -136,12 +136,6 @@ let Activity = () => {
     }
   }
 
-  console.log("soy actividad duration", actividad)
-  //console.log("soy listcountries", listcountries)
-  console.log("soy delete countries", deleteCountries)
-  //console.log("soy paquete", paquete)
-
-  //////////////////////////se puede usar styles components ?
   return (
     <header className="imagenfondo">
       <div className="logoahome">

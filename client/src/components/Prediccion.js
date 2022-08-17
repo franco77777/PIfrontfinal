@@ -62,7 +62,7 @@ let Prediccion = ({ countries, setSera, sera }) => {
     console.log("soy resultado", resultado)
     await counterRequest()
     await setSera([...counter])
-    console.log("souyseradeprediccion", sera)
+    
   }
 
   return (
