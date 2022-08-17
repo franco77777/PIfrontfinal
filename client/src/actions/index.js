@@ -30,13 +30,15 @@ export let order = value => dispatch => {
 
 export let detalles = id => async dispatch => {
   let respuesta = await axios.get(
-    `https://backfinalsera2.herokuapp.com/countries/countries/${id}`
+    `https://backfinalsera2.herokuapp.com/countries/${id}`
   )
   dispatch({ type: DETAILS, payload: respuesta.data })
 }
 
 export let counterRequest = () => async dispatch => {
-  let respuesta = await axios.get("/contador")
+  let respuesta = await axios.get(
+    "https://backfinalsera2.herokuapp.com/contador"
+  )
   dispatch({ type: COUNTER, payload: respuesta.data })
 }
 

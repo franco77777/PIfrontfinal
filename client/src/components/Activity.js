@@ -90,7 +90,10 @@ let Activity = () => {
     }
 
     let paquete = [actividad, paisespaquete]
-    let creacion = await axios.post("http://localhost:3001/activity", paquete)
+    let creacion = await axios.post(
+      "https://backfinalsera2.herokuapp.com/activity",
+      paquete
+    )
     dispatch(getCountries())
     alert(creacion.data)
 
