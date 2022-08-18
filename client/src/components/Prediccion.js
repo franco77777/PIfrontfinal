@@ -58,8 +58,7 @@ let Prediccion = ({ countries, setSera, sera }) => {
       `https://back-final1.herokuapp.com/contador/${e.target.name}`,
       [resultado]
     )
-    console.log("soy encontrado", encontrado)
-    console.log("soy resultado", resultado)
+
     await counterRequest()
     await setSera([...counter])
   }

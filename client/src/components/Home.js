@@ -73,7 +73,7 @@ function Home() {
     setMultiplicador(e.target.value * 10 - 10)
   }
 
-  console.log("soy paginado", paginados)
+  
 
   return (
     <div className="header">

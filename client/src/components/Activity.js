@@ -109,8 +109,7 @@ let Activity = () => {
   }
 
   let hoursValidation = e => {
-    console.log(/^([0-9])$/.test(actividad.duration))
-    console.log("soy actividad", actividad.duration)
+    
     if (
       actividad.duration > 23 ||
       actividad.duration < 0 ||
