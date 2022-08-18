@@ -6,7 +6,6 @@ import Order from "./Order"
 import Filter from "./Filter"
 import "./home.css"
 import SlideShow from "./SlideShow"
-import logo2 from "./../mundial/logohome.jpg"
 import styled from "styled-components"
 import estrella from "./../mundial/estrella.jpg"
 import salmon from "./../mundial/salmon.jpg"
@@ -24,7 +23,7 @@ function Home() {
     dispatch(counterRequest())
     dispatch(getCountries())
   }, [])
-
+  const [inputPaginado, setInputPaginado] = useState("")
   const [multiplicador, setMultiplicador] = useState(0)
 
   let final = 9 + multiplicador //19-29
@@ -52,9 +51,28 @@ function Home() {
     if (e.target.value === "-") {
       setMultiplicador(multiplicador - 10)
     }
+    setInputPaginado("")
   }
 
-  console.log("soy filtered", filtered)
+  let botonesP2 = filtered.slice(9, filtered.length)
+  let botones2 = Math.ceil(botonesP2.length / 10)
+  let a = [0]
+  for (let i = 0; i < botones2; i++) {
+    a.push(i + 1)
+  }
+
+  let inputChange = e => {
+    if (
+      !/^([0-9])*$/.test(e.target.value) ||
+      e.target.value < 1 ||
+      e.target.value > a.length
+    ) {
+      return setInputPaginado("")
+    }
+    setInputPaginado(e.target.value)
+    setMultiplicador(e.target.value * 10 - 10)
+  }
+
   console.log("soy paginado", paginados)
 
   return (
@@ -65,8 +83,14 @@ function Home() {
             <LogoInicio clasname="esta" src={logo2} alt="sdf" />
           </Link> */}
 
-          <Order setMultiplicador={setMultiplicador} />
-          <Filter setMultiplicador={setMultiplicador} />
+          <Order
+            setMultiplicador={setMultiplicador}
+            inputChange={inputChange}
+          />
+          <Filter
+            setMultiplicador={setMultiplicador}
+            inputChange={inputChange}
+          />
           <div className="createbodyfalso" id="create">
             <div className="deltitulocreate">
               <Link className="botontitulo" to="/activity">
@@ -108,7 +132,16 @@ function Home() {
             </div>
             <span>Prev</span>
           </button>
-
+          <div className="padreinputpaginado">
+            <input
+              onChange={inputChange}
+              value={inputPaginado}
+              type="text"
+              className="inputpaginado"
+              placeholder={Math.round(multiplicador / 10 + 1)}
+            />
+            &nbsp; of &nbsp;{a.length}
+          </div>
           <button
             className="botoncinco"
             onClick={paginado}
@@ -139,8 +172,8 @@ function Home() {
               <div key={i} id="prueba" className="prueba">
                 <div className="estrellaconteiner">
                   {e.copas && e.copas.length ? (
-                    e.copas.map(e => (
-                      <div className="estrella">
+                    e.copas.map((e, i) => (
+                      <div className="estrella" key={i}>
                         <img src={estrella} alt="estrella" />
                       </div>
                     ))
@@ -184,7 +217,16 @@ function Home() {
             </div>
             <span>Prev</span>
           </button>
-
+          <div className="padreinputpaginado">
+            <input
+              onChange={inputChange}
+              value={inputPaginado}
+              type="text"
+              className="inputpaginado"
+              placeholder={Math.round(multiplicador / 10 + 1)}
+            />
+            &nbsp; of &nbsp;{a.length}
+          </div>
           <button
             className="botoncinco"
             onClick={paginado}

@@ -157,7 +157,7 @@ body {
 .navBar {
   display: flex;
   justify-content: space-between; /* crea espacios */
-  align-items: stretch; /* los alinea arriba */
+  align-items: center; /* los alinea arriba */
   position: sticky;
   flex-wrap: wrap;
 
@@ -167,6 +167,7 @@ body {
   margin-top: 0;
   z-index: 20;
   height: min-content;
+  min-height: 70px;
   background-image: linear-gradient(
     145deg,
     blue,
@@ -198,7 +199,7 @@ body {
 }
 .slideshow {
   position: relative;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .botoncinco {
@@ -649,6 +650,30 @@ ul li:nth-child(2) a:before {
 
 ul li:nth-child(3) a:before {
   background: #0a66c2;
+}
+
+.inputpaginado {
+  color: white;
+
+  background: black;
+  width: 30px;
+  text-indent: 0%;
+  text-align: center;
+  height: 100%;
+  font-size: 1rem;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.padreinputpaginado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padreinputpaginado input:focus {
+  background-color: #0dc629;
+  transition: all 0.5s;
 }
 
 @media (max-width: 1220px) {
